@@ -10,6 +10,7 @@ class QuateList extends StatefulWidget {
 }
 
 class _QuateListState extends State<QuateList> {
+  List<String> quotes = ["All is well", "All the Best", "Warriors"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +18,9 @@ class _QuateListState extends State<QuateList> {
         appBar: AppBar(
           title: Text("guruvignesh"),
           backgroundColor: Colors.blueGrey[600],
+        ),
+        body: Column(
+          children: quotes.map((e) => Text(e.toString())).toList(),
         ));
   }
 }
